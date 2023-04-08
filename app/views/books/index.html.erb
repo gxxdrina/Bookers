@@ -1,8 +1,17 @@
-<body>
-  <h1>Books</h1>
+<h1>Books</h1>
+  <h4>Title</h4>
+  
+  <h4>Body</h4>
+  
 
+<p>Find me in app/views/books/index.html.erb</p>
 
-  <p>Find me in app/views/books/index.html.erb</p>
-
-  <h2>New book</h2>
-</body>
+<h2>New book</h2>
+  <%= form_with model: Book.new do |f| %>
+    <h4>Title</h4>
+    <%= f.text_field :title %>
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+    <%= f.submit 'Create Book' %>
+  <% end %>  
+    
