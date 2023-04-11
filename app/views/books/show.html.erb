@@ -4,12 +4,9 @@
   </div>
 <% end %>
 
-<h1>title:</h1>
-  <%= @book.title %>
+<p>title:<span><%= @book.title %></span></p>
 
-<h1>Body:</h1>
-  <%= @book.body %><br>
-  
+<p>Body:<span><%= @book.body %></span></p>
 
 <%= link_to 'Edit', edit_book_path(@book.id) %>
-<%= link_to 'Back', books_path(@book.id) %>
+<%= link_to 'Back', books_path %>
